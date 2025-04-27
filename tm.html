@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen of tears</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #141414;
+            color: white;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: red;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        nav ul li:hover > a {
+            color: red;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            list-style: none;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            min-width: 180px;
+        }
+        .dropdown li {
+            padding: 10px 15px;
+            white-space: nowrap;
+        }
+        .dropdown li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown li:hover {
+            
+        }
+
+        /* Hiển thị menu khi hover */
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+
+        .spacer {
+            height: 100px;
+        }
+        .review {
+            padding: 40px;
+            margin-top: 80px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+           
+        }
+        .review img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .review h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .review p {
+        color: white;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Review</div>
+         <nav>
+        <ul>
+            <li><a href="tc.html"  style="color: white; text-decoration: none;">Trang chủ</a></li>
+            <li>
+                <a href="qot.html" style= "color: white; text-decoration: none;">Thể loại</a>
+                <ul class="dropdown">
+                    <li><a href="hd.html" >Hành động</a></li>
+                    <li><a href="hh.html" >Hài hước</a></li>
+                    
+                    <li><a href="lm.html" >Lãng mạn</a></li>
+                </ul>
+            </li>
+         
+            <li><a href="dk.html"  style="color: white; text-decoration: none;">Tài khoản</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div class="spacer"></div>
+    <main>
+        <section class="review">
+            <img src="https://cdn.kphude.com/wp-content/uploads/2025/02/2025.The_.Trauma.Code_.Heroes.On_.Call_.webp" alt="Inception Movie Poster">
+            <h2>The Trauma Code: Heroes On Call
+</h2>
+            <p>
+                The Trauma Code: Heroes on Call ( tiếng Hàn :  중증외상센터 ) là một bộ phim truyền hình hài về y khoa của Hàn Quốc năm 2025 do Choi Tae-kang viết kịch bản, Lee Do-yoon đạo diễn và có sự tham gia của Ju Ji-hoon , Choo Young-woo , Ha Young , Yoon Kyung-ho và Jung Jae-kwang . Dựa trên tiểu thuyết web Trauma Center: Golden Hour của Hansanleega và Hongbichira, được đăng nhiều kỳ thành Naver Webtoon vào năm 2019. Bộ phim kể về hành trình của Baek Kang-hyuk, một bác sĩ phẫu thuật chấn thương tài giỏi gia nhập một bệnh viện đại học đang gặp khó khăn. Phim được phát hành trên Netflix vào ngày 24 tháng 1 năm 2025.
+            </p>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/pj5N7Ayl4dc?si=npnItVSz_bUcbwV7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+<footer>
+    &copy; 2025 - Trang web review phim 
+</footer>
+</body>
+</html>
+

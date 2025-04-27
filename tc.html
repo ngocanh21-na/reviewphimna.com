@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVIEW PHIM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #141414;
+            color: white;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: red;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        nav ul li:hover > a {
+            color: red;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            list-style: none;
+            padding: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            min-width: 180px;
+        }
+        .dropdown li {
+            padding: 10px 15px;
+            white-space: nowrap;
+        }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        .spacer {
+            height: 100px;
+        }
+        .movies {
+            padding: 40px;
+            margin-top: 80px;
+            overflow: hidden;
+        }
+        .movie-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+        .movie-list {
+            display: flex;
+            gap: 15px;
+            animation: scrollMovies 50s linear infinite;
+            width: max-content;
+        }
+        @keyframes scrollMovies {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+        .movie-list img {
+            width: 220px;
+            height: 330px;
+            object-fit: cover;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .movie-list img:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 15px rgba(255, 0, 0, 0.5);
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+       
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.watch-now {
+    display: inline-block;
+    padding: 12px 24px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.watch-now:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+.watch-now {
+    display: inline-block;
+    padding: 12px 24px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.watch-now:hover {
+    background: rgba(0, 0, 0, 0.3);
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+.hero-banner {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 80px; /* Đẩy xuống dưới header */
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giúp video phủ kín */
+    z-index: -1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">REVIEW</div>
+        <nav>
+            <ul>
+                <li><a href="tc.html">Trang chủ</a></li>
+                <li>
+                    <a href="#">Thể loại</a>
+                    <ul class="dropdown">
+                        <li><a href="hd.html">Hành động</a></li>
+                        <li><a href="hh.html">Hài hước</a></li>
+                        <li><a href="lm.html">Lãng mạn</a></li>
+                    </ul>
+                </li>
+                <li><a href="dk.html">Tài khoản</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="spacer"></div>
+    <main>
+    <section class="hero-banner">
+   <video autoplay loop muted playsinline class="background-video">
+        <source src="Download.mp4" type="video/mp4">
+       
+    </video>
+    <div class="banner-content">
+        <a href="tm.html" class="watch-now">Xem ngay</a>
+    </div>
+</section>
+
+
+        <section class="movies">
+            <div class="movie-container">
+                <div class="movie-list">
+                    <a href="The flu.html"><img src="https://i.imgur.com/7DpYjoE.jpeg" alt="Movie 1"></a>
+                    <a href="kacvpe.html"><img src="https://www.elle.vn/app/uploads/2023/06/25/535038/tuoi-tre-khi-anh-chay-ve-phia-em-scaled.jpg" alt="Movie 2"></a>
+                    <a href="TGVAVHDL.html"><img src="https://scontent.fdad1-1.fna.fbcdn.net/v/t39.30808-6/321603243_857349908740093_3484254381459647820_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=5UN3g4XNw9UQ7kNvgFf3r_l&_nc_oc=Adimp0cjXpAOcpZnr39Vb6uhhvFSMXwDJlsNSbx7AOx52QWUyEm22ZKoJQsGdZTBZT8&_nc_zt=23&_nc_ht=scontent.fdad1-1.fna&_nc_gid=A0G_RzgKsrWIiUZAcATiWSW&oh=00_AYDC5CtB8KFufNw2CER8U-C1jYj1B7CJ5qu0V9m5myrPCA&oe=67BCB569" alt="Movie 3"></a>
+                    <a href="sg.html"><img src="https://duyendangvietnam.net.vn/public/uploads/file1s/z6305797301512_3382acb5764e77bfe8429613d4c20191.jpg" alt="Movie 4"></a>
+                    <a href="qot.html"><img src="https://upload.wikimedia.org/wikipedia/vi/e/e2/Queen_of_Tears_poster.png" alt="Movie 5"></a>
+                    <a href="tm.html"><img src="https://blog.asianwiki.com/wp-content/uploads/2025/01/The_Trauma_Code-Heroes_on_Call-tp2.jpeg" alt="Movie 5"></a>
+
+                    <!-- Nhân đôi danh sách để tạo hiệu ứng vô tận -->
+                    <a href="The flu.html"><img src="https://i.imgur.com/7DpYjoE.jpeg" alt="Movie 1"></a>
+                    <a href="kacvpe.html"><img src="https://www.elle.vn/app/uploads/2023/06/25/535038/tuoi-tre-khi-anh-chay-ve-phia-em-scaled.jpg" alt="Movie 2"></a>
+                    <a href="TGVAVHDL.html"><img src="https://scontent.fdad1-1.fna.fbcdn.net/v/t39.30808-6/321603243_857349908740093_3484254381459647820_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=5UN3g4XNw9UQ7kNvgFf3r_l&_nc_oc=Adimp0cjXpAOcpZnr39Vb6uhhvFSMXwDJlsNSbx7AOx52QWUyEm22ZKoJQsGdZTBZT8&_nc_zt=23&_nc_ht=scontent.fdad1-1.fna&_nc_gid=A0G_RzgKsrWIiUZAcATiWSW&oh=00_AYDC5CtB8KFufNw2CER8U-C1jYj1B7CJ5qu0V9m5myrPCA&oe=67BCB569" alt="Movie 3"></a>
+                    <a href="sg.html"><img src="https://duyendangvietnam.net.vn/public/uploads/file1s/z6305797301512_3382acb5764e77bfe8429613d4c20191.jpg" alt="Movie 4"></a>
+                    <a href="qot.html"><img src="https://upload.wikimedia.org/wikipedia/vi/e/e2/Queen_of_Tears_poster.png" alt="Movie 5"></a>
+                      <a href="tm.html"><img src="https://blog.asianwiki.com/wp-content/uploads/2025/01/The_Trauma_Code-Heroes_on_Call-tp2.jpeg" alt="Movie 5"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 - Trang web review phim
+    </footer>
+</body>
+</html>
